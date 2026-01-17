@@ -1,0 +1,7 @@
+CREATE TABLE vendas (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    data DATE NOT NULL,
+    tipo_venda TEXT NOT NULL,
+    forma_pagamento TEXT NOT NULL,
+    valor REAL NOT NULL
+);

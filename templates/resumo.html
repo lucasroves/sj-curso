@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-xl font-bold mb-4">Resumo Diário</h1>
+<ul>
+    {% for forma, total in diario %}
+        <li>{{ forma }}: R$ {{ total }}</li>
+    {% endfor %}
+</ul>
+
+<h1 class="text-xl font-bold mt-6 mb-4">Resumo Mensal</h1>
+<ul>
+    {% for forma, total in mensal %}
+        <li>{{ forma }}: R$ {{ total }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

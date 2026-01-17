@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-2xl font-bold mb-4">Registrar Venda</h1>
+
+<form method="POST" class="grid grid-cols-2 gap-4">
+    <input type="date" name="data" class="border p-2" required>
+
+    <select name="tipo" class="border p-2">
+        <option>Balcão</option>
+        <option>Delivery</option>
+        <option>Online</option>
+    </select>
+
+    <select name="forma" class="border p-2">
+        <option>Dinheiro</option>
+        <option>Débito</option>
+        <option>Crédito</option>
+        <option>Duplicata</option>
+    </select>
+
+    <input type="number" step="0.01" name="valor" class="border p-2" placeholder="Valor" required>
+
+    <button class="col-span-2 bg-blue-600 text-white p-2 rounded">
+        Salvar Venda
+    </button>
+</form>
+
+<a href="/resumo" class="block mt-4 text-blue-600">Ver Resumo</a>
+{% endblock %}
